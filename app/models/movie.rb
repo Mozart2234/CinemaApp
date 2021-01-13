@@ -20,6 +20,10 @@
 #  index_movies_on_title  (title) UNIQUE
 #
 class Movie < ApplicationRecord
+  # Relationships 
+  has_one_attached :poster
+  
+  # Validations
   validates :title, :plot, presence: true
   
   validates_numericality_of :ranking, 
@@ -31,5 +35,4 @@ class Movie < ApplicationRecord
     less_than_or_equal_to: 10.0
 
   validates_uniqueness_of :title
-
 end

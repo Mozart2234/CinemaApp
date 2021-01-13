@@ -52,4 +52,8 @@ RSpec.describe Movie do
       should validate_uniqueness_of(:title)
     end
   end
+
+  describe "#relationships" do
+    it { should have_one_attached(:poster) }
+  end
 end
