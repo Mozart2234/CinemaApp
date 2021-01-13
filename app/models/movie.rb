@@ -17,5 +17,8 @@
 #
 class Movie < ApplicationRecord
   validates :title, :plot, presence: true
-
+  
+  validates_numericality_of :ranking, 
+    greater_than_or_equal_to: 0.0, 
+    less_than_or_equal_to: 5.0
 end
