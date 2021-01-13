@@ -44,4 +44,12 @@ RSpec.describe Movie do
         is_greater_than_or_equal_to(0.0)
     end
   end
+
+  describe "#uniqueness validations" do
+    subject { FactoryBot.build(:movie) }
+
+    it do 
+      should validate_uniqueness_of(:title)
+    end
+  end
 end
