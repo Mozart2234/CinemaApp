@@ -21,4 +21,9 @@ class Movie < ApplicationRecord
   validates_numericality_of :ranking, 
     greater_than_or_equal_to: 0.0, 
     less_than_or_equal_to: 5.0
+
+  validates_numericality_of :imbd_ranking,
+    greater_than_or_equal_to: 0.0,
+    less_than_or_equal_to: 10.0
+
 end
