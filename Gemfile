@@ -35,6 +35,8 @@ group :development, :test do
   gem 'shoulda-matchers', '~> 4.5'
   gem 'faker', '~> 2.15', '>= 2.15.1'
   gem 'database_cleaner', '~> 1.8', '>= 1.8.5'
+
+  gem 'annotate', '~> 3.1', '>= 3.1.1'
 end
 
 group :development do
