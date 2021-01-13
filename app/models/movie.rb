@@ -15,6 +15,10 @@
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
 #
+# Indexes
+#
+#  index_movies_on_title  (title) UNIQUE
+#
 class Movie < ApplicationRecord
   validates :title, :plot, presence: true
   

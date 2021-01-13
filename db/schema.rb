@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 2021_01_13_024458) do
     t.decimal "revenue", default: "0.0"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["title"], name: "index_movies_on_title", unique: true
   end
 
 end
