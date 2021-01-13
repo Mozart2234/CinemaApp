@@ -16,4 +16,6 @@
 #  updated_at   :datetime         not null
 #
 class Movie < ApplicationRecord
+  validates :title, :plot, presence: true
+
 end
