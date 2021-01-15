@@ -20,19 +20,19 @@
 #  index_movies_on_title  (title) UNIQUE
 #
 class Movie < ApplicationRecord
-  # Relationships 
+  # Relationships
   has_one_attached :poster
-  
+
   # Validations
   validates :title, :plot, presence: true
-  
-  validates_numericality_of :ranking, 
-    greater_than_or_equal_to: 0.0, 
-    less_than_or_equal_to: 5.0
+
+  validates_numericality_of :ranking,
+                            greater_than_or_equal_to: 0.0,
+                            less_than_or_equal_to: 5.0
 
   validates_numericality_of :imbd_ranking,
-    greater_than_or_equal_to: 0.0,
-    less_than_or_equal_to: 10.0
+                            greater_than_or_equal_to: 0.0,
+                            less_than_or_equal_to: 10.0
 
   validates_uniqueness_of :title
 end
